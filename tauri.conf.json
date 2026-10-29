@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Syphon",
+  "version": "0.2.0",
+  "identifier": "app.syphon.player",
+  "build": { "frontendDist": "dist" },
+  "app": {
+    "windows": [],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["deb", "appimage", "nsis", "msi"],
+    "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.png", "icons/icon.ico"],
+    "category": "Video",
+    "shortDescription": "Watch your Syphon library",
+    "longDescription": "Opens straight into your Syphon library at home or through your VPN box, with a TV mode for a computer plugged into a television.",
+    "linux": {
+      "deb": { "depends": ["gstreamer1.0-plugins-good", "gstreamer1.0-plugins-bad", "gstreamer1.0-libav"] }
+    },
+    "windows": {
+      "webviewInstallMode": { "type": "downloadBootstrapper" }
+    }
+  }
+}

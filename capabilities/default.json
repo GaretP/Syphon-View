@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "The Syphon app's window loads pages from its own local helper and needs no access to the app's internals.",
+  "windows": ["main"],
+  "permissions": []
+}
